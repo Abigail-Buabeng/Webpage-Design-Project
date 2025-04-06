@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - CampusBites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .register-container {
+      width: 350px;
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .register-container h2 {
+      margin-bottom: 1rem;
+      color: #ff5e57;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .password-wrapper {
+      position: relative;
+    }
+    .show-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #ff5e57;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .register-button {
+      width: 100%;
+      background-color: #ff5e57;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .register-button:hover {
+      background-color: #e04c45;
+    }
+    .login-link {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .login-link a {
+      color: #ff5e57;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Create an Account</h2>
+
+    <form id="register-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Create a password" required>
+          <button type="button" class="show-password" onclick="showPassword()">👁</button>
+        </div>
+      </div>
+
+      <button type="submit" class="register-button">Register</button>
+    </form>
+
+    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    function showPassword() {
+      let passwordField = document.getElementById("password");
+      passwordField.type = "text"; // Show password
+      
+      setTimeout(() => {
+        passwordField.type = "password"; // Hide password after 10 seconds
+      }, 10000);
+    }
+
+    document.getElementById("register-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Simulating account creation (for now, we'll just store in localStorage)
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", password);
+
+      alert("Account created successfully!");
+      window.location.href = "delivery.html"; // Redirect to delivery page
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings - CampusBites</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #ff5e57;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    nav {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: #ff5e57;
+      font-weight: 600;
+      margin: 0 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .section {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .section h3 {
+      margin-top: 0;
+      color: #ff5e57;
+      font-size: 1.4rem;
+    }
+    .section p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .btn {
+      padding: 0.75rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-right: 0.75rem;
+    }
+    .btn-danger {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+    .btn-logout {
+      background-color: #ff5e57;
+      color: #fff;
+    }
+    select {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff5e57;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>CampusBites - Setting</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="stores.html">Stores</a>
+    <a href="ordering.html">Order</a>
+    <a href="account.html">Account</a>
+    <a href="settings.html">Setting</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- About Section -->
+    <div class="section">
+      <h3>About CampusBites</h3>
+      <p>CampusBites is your go-to food delivery service on campus. We partner with your favorite eateries to bring delicious meals straight to your door.</p>
+    </div>
+
+    <!-- Language Section -->
+    <div class="section">
+      <h3>Language</h3>
+      <label for="languageSelect">Choose your preferred language:</label><br><br>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+
+    <!-- Delete Account -->
+    <div class="section">
+      <h3>Delete Account</h3>
+      <p>Deleting your account is permanent and cannot be undone.</p>
+      <button class="btn btn-danger" onclick="deleteAccount()">Delete My Account</button>
+    </div>
+
+    <!-- Logout -->
+    <div class="section">
+      <h3>Logout</h3>
+      <button class="btn btn-logout" onclick="logout()">Logout</button>
+    </div>
+
+  </div>
+
+  <footer>&copy; 2025 CampusBites. All rights reserved.</footer>
+
+  <script>
+    function deleteAccount() {
+      if (confirm("Are you sure you want to delete your account? This action is irreversible.")) {
+        localStorage.clear();
+        alert("Your account has been deleted.");
+        window.location.href = "register.html";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("userEmail");
+      localStorage.removeItem("userPassword");
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', function () {
+      alert("Language changed to: " + this.options[this.selectedIndex].text);
+    });
+  </script>
+
+</body>
+</html>

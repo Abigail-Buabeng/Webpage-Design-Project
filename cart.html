@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - CampusBites</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #ff5e57;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    nav {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: #ff5e57;
+      font-weight: 600;
+      margin: 0 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cart-item h4 {
+      margin: 0.5rem 0;
+    }
+    .cart-item p {
+      margin: 0;
+    }
+    .cart-item .price {
+      color: #ff5e57;
+      font-weight: 600;
+    }
+    .total {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .checkout-button {
+      background-color: #ff5e57;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff5e57;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>CampusBites - Your Cart</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="stores.html">Stores</a>
+    <a href="ordering.html">Order</a>
+    <a href="account.html">Account</a>
+    <a href="settings.html">Setting</a>
+  </nav>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+
+    <!-- Cart Items -->
+    <div class="cart-item">
+      <img src="jollof-icon.jpg" alt="Jollof Rice">
+      <div>
+        <h4>Jollof Rice & Chicken</h4>
+        <p>Store: Giffben's Kitchen</p>
+        <p>Quantity: 1</p>
+      </div>
+      <div class="price">GHS 25</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="shawarma.jpeg" alt="Shawarma">
+      <div>
+        <h4>Shawarma Combo</h4>
+        <p>Store: Eusbett Restaurant</p>
+        <p>Quantity: 1</p>
+      </div>
+      <div class="price">GHS 30</div>
+    </div>
+
+    <!-- Total -->
+    <div class="total">
+      <span>Total:</span>
+      <span class="price">GHS 55</span>
+    </div>
+
+    <!-- Checkout Button -->
+    <button class="checkout-button" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+  </div>
+
+  <footer>&copy; 2025 CampusBites. All rights reserved.</footer>
+</body>
+</html>

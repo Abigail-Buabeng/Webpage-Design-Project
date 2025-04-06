@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stores - CampusBites</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #ff5e57;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    nav {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: #ff5e57;
+      font-weight: 600;
+      margin: 0 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .search-box {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .search-box input {
+      width: 80%;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .store {
+      background: #f9f9f9;
+      border-radius: 16px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .store img {
+      width: 120px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    .store-details {
+      flex: 1;
+    }
+    .store-details h3 {
+      margin-bottom: 0.5rem;
+      color: #ff5e57;
+    }
+    .store-details p {
+      margin-bottom: 0.3rem;
+    }
+    .rating {
+      color: gold;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    .favorite-button {
+      background-color: #ff5e57;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+    .favorite-button:hover {
+      background-color: #ff3c2f;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff5e57;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>CampusBites - Stores</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="stores.html">Stores</a>
+    <a href="ordering.html">Order</a>
+    <a href="account.html">Account</a>
+    <a href="settings.html">Setting</a>
+  </nav>
+
+  <div class="container">
+    <h2>Explore Our Partner Stores</h2>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search stores by name or specialty..." />
+    </div>
+
+    <div id="storeList">
+      <div class="store">
+        <img src="giffben.jpg" alt="Giffben's Kitchen">
+        <div class="store-details">
+          <h3>Giffben's Kitchen</h3>
+          <p>Specialty: Ghanaian dishes (Jollof, Waakye, Banku)</p>
+          <p>Location: Behind Hall one </p>
+          <div>
+            <span class="rating">★★★★☆</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <img src="eusbett.png" alt="Eusbett">
+        <div class="store-details">
+          <h3>Eusbett Hotel</h3>
+          <p>Specialty: Shawarma, Grilled Chicken, Fries</p>
+          <p>Location: Sunyani </p>
+          <div>
+            <span class="rating">★★★★★</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <img src="esbak.png" alt="Esbak">
+        <div class="store-details">
+          <h3>Esbak Restaurant </h3>
+          <p>Specialty: Salads, Smoothies, Healthy Bowls</p>
+          <p> Location: Sunyani </p>
+          <div>
+            <span class="rating">★★★★☆</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <img src="tyco.jpeg" alt="Tyco City">
+        <div class="store-details">
+          <h3>Tyco City</h3>
+          <p>Specialty: Pizza, Garlic Bread, Sides</p>
+          <p>Location: Abessim</p>
+          <div>
+            <span class="rating">★★★★☆</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <img src="azampana.jpg" alt="azampana">
+        <div class="store-details">
+          <h3>Azampana </h3>
+          <p>Specialty: Banku, Tilapia, Kenkey, Fufu</p>
+          <p>Location: Hall 2 Market Square</p>
+          <div>
+            <span class="rating">★★★☆☆</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <img src="CS-kitchen.jpg" alt="CS-Kitchen">
+        <div class="store-details">
+          <h3>CS-Kitchen</h3>
+          <p>Specialty: Fried Rice, Noodles, Spring Rolls</p>
+          <p>Location: Fiapre</p>
+          <div>
+            <span class="rating">★★★★☆</span>
+            <button class="favorite-button">Favorite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 CampusBites. All rights reserved.</footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const storeList = document.getElementById('storeList');
+    const stores = Array.from(storeList.children);
+
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase();
+      stores.forEach(store => {
+        const text = store.textContent.toLowerCase();
+        store.style.display = text.includes(term) ? 'flex' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
